@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- IT17152938 -->
+    <!-- Sachin Kumara Liayanage -->
+    <meta charset="UTF-8">
+    <title>CTSE Assignment 02 - AR </title>
+    <script type="text/javascript" src="jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+    <!-- include A-Frame obviously -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!-- include ar.js for A-Frame -->
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    
+
+</head>
+<!-- ="debugUIEnabled: false;" -->
+
+<body style='margin : 0px; overflow: hidden;'>
+    
+
+    <script>
+        $(document).ready(function () {
+            let assets="";
+            let marker="";
+            fetch("data.json")
+            .then(response => response.json())
+            .then(json => {
+                json.forEach(element => {
+                    console.log(element);
+                    assets+="<a-asset-item" +
+                    " id='"+element.id+"'"+
+                    " src='"+element.obj+"'"+
+                    "></a-asset-item>";
+                    let entity = "<a-entity"+ 
+                    " gltf-model='#"+element.id+"'"+
+                    " position='"+element.objPosition+"'"+
+                    " rotation='"+element.objRotation+"'"+
+                    " scale='"+element.objScale+"'"+
+                    " > </a-entity>";
+                    let text="<a-text"+ 
+                    " value='\n\n"+element.txt.company+"\n"+element.txt.slogan+"'"+
+                    " height='"+element.txtH+"'"+
+                    " width='"+element.txtW+"'"+
+                    " rotation='"+element.txtRotation+"'"+
+                    " color='"+element.txtColor+"'"+
+                    " position='"+element.txtPosition+"'"+
+                    " weight='bold' align='center' ></a-text>"
+                    marker+="<a-marker type='pattern' url='"+element.patt+"'>"+
+                    entity+
+                    text+
+                    "</a-marker>";
+                });
+
+            }).then(()=>{
+                let full="<a-scene embedded arjs='debugUIEnabled: false;'>"+
+                "<a-assets>"+
+                assets+
+                "</a-assets>"+
+                marker+
+                "<a-entity camera></a-entity>"+
+                "</a-scene>";
+                console.log(full);
+                    
+                $("body").append(full);
+                
+            });
+        });
+
+        
+    </script>
+    
+</body>
+
+</html>

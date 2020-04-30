@@ -1,0 +1,39 @@
+[
+    {
+        "id":"teddybear",
+        "obj":"d/teddy_bear/scene.gltf",
+        "patt":"patt/teddy_bear.patt",
+        "objPosition": "0 0.3 0.4",
+        "objRotation":"-90 0 0",
+        "objScale":"0.05 0.05 0.05",
+        "txt":{
+            "company":"Teddy",
+            "slogan":"Make Happy"
+        },
+        "txtW":"4",
+        "txtH":"5",
+        "txtPosition": "0 0.5 0.6",
+        "txtRotation":"-90 0 0",
+        "txtColor":"#F70505"
+
+    },
+    {
+        "id":"tableclock",
+        "obj":"d/table_clock/scene.gltf",
+        "patt":"patt/table_clock.patt",
+        "objPosition": "0 0.3 0.4",
+        "objRotation":"-90 0 0",
+        "objScale":"0.05 0.05 0.05",
+        "txt":{
+            "company":"Q&Q",
+            "slogan":"Table clock"
+        },
+        "txtW":"4",
+        "txtH":"5",
+        "txtPosition": "0 0.5 0.6",
+        "txtRotation":"-90 0 0",
+        "txtColor":"#22E302"
+
+    }
+
+]
