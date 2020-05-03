@@ -7,12 +7,13 @@
         "objRotation":"-90 0 0",
         "objScale":"0.05 0.05 0.05",
         "txt":{
+            "price":"RS. 570.00",
             "company":"Teddy",
             "slogan":"Make Happy"
         },
         "txtW":"4",
         "txtH":"5",
-        "txtPosition": "0 0.5 0.6",
+        "txtPosition": "0 0.5 0.8",
         "txtRotation":"-90 0 0",
         "txtColor":"#F70505"
 
@@ -25,14 +26,34 @@
         "objRotation":"-90 0 0",
         "objScale":"0.05 0.05 0.05",
         "txt":{
+            "price":"RS. 2456.00",
             "company":"Q&Q",
             "slogan":"Table clock"
         },
         "txtW":"4",
         "txtH":"5",
-        "txtPosition": "0 0.5 0.6",
+        "txtPosition": "0 0.5 0.8",
         "txtRotation":"-90 0 0",
         "txtColor":"#22E302"
+
+    },
+    {
+        "id":"boxguitar",
+        "obj":"d/box_guitar/scene.gltf",
+        "patt":"patt/box_guitar.patt",
+        "objPosition": "0 0.3 0.1",
+        "objRotation":"-90 90 0",
+        "objScale":"1.5 1.5 1.5",
+        "txt":{
+            "price":"RS. 15600.00",
+            "company":"Yamaha",
+            "slogan":"Box Guitar"
+        },
+        "txtW":"4",
+        "txtH":"5",
+        "txtPosition": "0 0.5 0.8",
+        "txtRotation":"-90 0 0",
+        "txtColor":"#0267FC"
 
     }
 
